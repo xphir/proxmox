@@ -68,5 +68,4 @@ fi
 
 #4: update:
 echo "- Updating System"
-apt-get -y update
-apt-get -y upgrade
+apt update && apt upgrade -y
