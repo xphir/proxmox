@@ -11,6 +11,9 @@ qm set VMID -scsi0 /dev/sdX
 # Appliance Import
 qm importdisk VMID pathtoappliance.ova local-lvm
 
+# Restore a backup
+# structure qmrestore {backup path & file} {new vm id} --storage {storage name}
+qmrestore /mnt/pve/iron_bank/dump/vzdump-qemu-103-2020_09_28-16_30_58.vma.zst 103 --storage local-zfs
 
 # ---------------------- Disk management ------------------------------
 
@@ -23,7 +26,7 @@ lsblk -o name,model,serial,uuid /dev/sdX
 
 # ----------------------Zpool Management ------------------------------
 # Find ARC RAM usage for Zpool:
-awk '/^size/ { print $1 " " $3 / 1048576 }' < /proc/spl/kstat/zfs/arcstats
+watch "awk '/^size/ { print \$1 " " \$3 / 1048576 }' < /proc/spl/kstat/zfs/arcstats"
 
 # Replace Zpool Drive:
 zpool replace pool /old/drive /new/drive
