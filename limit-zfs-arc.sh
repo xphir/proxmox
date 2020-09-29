@@ -19,6 +19,7 @@ echo "----------------------------------------------------------------"
 # Add Kernel Modules (for /etc/modules)
 cat >> /etc/modprobe.d/zfs.conf <<EOL
 # Max 4096 MB Limit
+# options zfs zfs_arc_min=2147483648
 options zfs zfs_arc_max=4294967296
 EOL
 
