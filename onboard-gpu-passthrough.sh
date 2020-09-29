@@ -11,8 +11,8 @@ varversion=1.0
 # USAGE
 # You can run this scritp directly using:
 # wget https://raw.githubusercontent.com/xphir/proxmox/master/onboard-gpu-passthrough.sh
-# chmox +x drive-passtrough.sh
-# ./drive-passtrough.sh
+# chmod +x onboard-gpu-passthrough.sh
+# ./onboard-gpu-passthrough.sh
 
 echo "----------------------------------------------------------------"
 echo "Elliot Schot - 2020"
