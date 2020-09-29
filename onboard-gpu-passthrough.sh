@@ -7,7 +7,6 @@
 varversion=1.0
 #V1.0: Initial Release - proof of concept
 
-
 # USAGE
 # You can run this scritp directly using:
 # wget https://raw.githubusercontent.com/xphir/proxmox/master/onboard-gpu-passthrough.sh
@@ -22,7 +21,7 @@ echo "----------------------------------------------------------------"
 # TODO: Check bootloader type grub vs systemd-boot (it currently only supports system boot
 
 # Add lines to systemd-boot
-echo " intel_iommu=on i915.enable_gvt=1" >> greetings.txt
+echo " intel_iommu=on i915.enable_gvt=1" >> /etc/kernel/cmdline
 echo "enabled IOMMU & Inel GVT-g"
 
 # Add Kernel Modules (for /etc/modules)
