@@ -35,6 +35,10 @@ zpool clear "poolname"
 # live disk IO
 watch -n 1 "zpool iostat -v"
 
+# nvme temperature checking
+watch "smartctl /dev/nvme0 -A | grep Temperature: | awk '{print \$2}'"
+watch "smartctl /dev/nvme1 -A | grep Temperature: | awk '{print \$2}'"
+
 # -------------------------- TOOLS --------------------------------------
 
 # Ioping - usefull to simulate drive activity and therefore locating it.
