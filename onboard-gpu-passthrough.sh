@@ -9,6 +9,7 @@ varversion=1.0
 
 # USAGE
 # You can run this scritp directly using:
+# bash <(curl -Ss https://raw.githubusercontent.com/xphir/proxmox/master/onboard-gpu-passthrough.sh)
 # wget https://raw.githubusercontent.com/xphir/proxmox/master/onboard-gpu-passthrough.sh
 # chmod +x onboard-gpu-passthrough.sh
 # ./onboard-gpu-passthrough.sh
