@@ -25,6 +25,10 @@ echo "----------------------------------------------------------------"
 echo " intel_iommu=on i915.enable_gvt=1" >> /etc/kernel/cmdline
 echo "enabled IOMMU & Inel GVT-g"
 
+echo "Output from /etc/kernel/cmdline"
+cat /etc/kernel/cmdline
+read -p "Press enter to continue"
+
 # Add Kernel Modules (for /etc/modules)
 echo "
 # Modules required for PCI passthrough
@@ -39,6 +43,11 @@ exngt
 vfio-mdev
 " >> /etc/modules
 
+echo "Output from /etc/modules"
+cat /etc/modules
+
+read -p "Press enter to continue"
+
 echo "Added Kernel Modules"
 
 # Refresh initramfs
@@ -47,4 +56,5 @@ update-initramfs -u -k all
 echo "Refreshed Iitramfs"
 
 # Reboot
+read -p "Press enter to reboot"
 reboot
