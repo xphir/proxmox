@@ -20,6 +20,8 @@ echo "Proxmox Onboard GPU Passthrough"
 echo "----------------------------------------------------------------"
 
 # TODO: Check bootloader type grub vs systemd-boot (it currently only supports system boot
+echo "FOR systemd-boot only. If not using systemd-boot please ctrl + c now"
+read -p "Press enter to continue"
 
 # Add lines to systemd-boot
 echo " intel_iommu=on i915.enable_gvt=1" >> /etc/kernel/cmdline
