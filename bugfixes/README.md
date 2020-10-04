@@ -8,6 +8,7 @@ Note: The following values in the error will be different for you .
 | {VMID} | Your VM id (eg. 103) |
 | {STORAGE_LOCAL} | Your local storage name (eg. local-zfs) |
 | {STORAGE_NET} | Your network storage name (you might not have this one) |
+
 This error seems to occur after you have made a time change to your server (eg, changed the BIOS time). It didn't seem to fix the issue even when I revered the time change. If you have a cluster it will show this error on every server within the cluster.
 
 Sample error message (this shows up in your syslog)
